@@ -21,10 +21,12 @@ const BetCard = ({
 }) => {
   const linkTitle = replaceSpacesWithUnderscores(title);
   return (
-    <div className=" cursor-pointer col-span-4 border-2 hover:border-indigo-500 transition-all rounded-md relative p-2  flex flex-col gap-3">
+    <div className=" cursor-pointer col-span-4  sm:col-span-12 border-2 hover:border-indigo-500 transition-all rounded-md relative p-2  flex flex-col gap-3">
       <Link href={`/${linkTitle}`}>
         <div className="flex flex-col  items-start">
-          <h2 className=" text-2xl font-bold text-indigo-700  ">{topic}</h2>
+          <h2 className=" text-2xl font-bold text-indigo-700 sm:text-lg  ">
+            {topic}
+          </h2>
           <p
             className={` text-xs ${tagsColor[tag].color} text-white px-2 rounded-full`}
           >
@@ -47,7 +49,7 @@ const BetCard = ({
             </div>
           </div>
         </div>
-        <button className="absolute right-0 top-[10px] bg-gradient-to-r from-blue-600  to-indigo-400 text-sm  rounded-full py-1 px-2 mr-2 text-white">
+        <button className="absolute right-0 top-[10px] bg-gradient-to-r from-blue-600  to-indigo-400 text-sm  sm:text-xs rounded-full py-1 px-2 mr-2 text-white">
           Bet Now!
         </button>
         <div className="w-full h-full bg-red absolute"></div>
