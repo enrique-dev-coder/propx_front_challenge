@@ -3,6 +3,7 @@ import Layout from "@/components/wrappers/Layout";
 import { archivo } from "@/fonts";
 import { data } from "@/data";
 import BetCard from "@/components/BetCard";
+
 export default function Home() {
   return (
     <Layout>
@@ -20,6 +21,7 @@ export default function Home() {
             id={card.id}
             tag={card.tag}
             topic={card.topic}
+            title={card.title}
           />
         ))}
       </div>

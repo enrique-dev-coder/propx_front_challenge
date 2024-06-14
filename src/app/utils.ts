@@ -30,3 +30,11 @@ export const dataForCounter: DataForCounter = {
   11: { users: 234567 },
   12: { users: 345678 },
 };
+
+export function replaceSpacesWithUnderscores(str: string): string {
+  return str.replace(/ /g, "_");
+}
+
+export function replaceUnderscoresWithSpaces(str: string): string {
+  return str.replace(/_/g, " ");
+}
